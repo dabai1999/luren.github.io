@@ -11,16 +11,19 @@
     style="display: flex; flex-direction: column; align-items: center"
   >
     <div align="center" style="width: 100%">
-      <img
-        src="打酱油.jpeg"
-        alt="头像"
-        height="100"
-        width="100"
-        style="vertical-align: middle"
-      />
-      <h1 style="font-size: -webkit-xxx-large; display: -webkit-inline-box">
-        你好！
-      </h1>
+      <touxiang>
+        <img
+          src="打酱油.jpeg"
+          alt="头像"
+          height="100"
+          width="100"
+          style="vertical-align: middle"
+        />
+        <h1 style="font-size: -webkit-xxx-large; display: -webkit-inline-box">
+          你好！
+        </h1>
+      </touxiang>
+      <guankanshu> </guankanshu>
     </div>
 
     <center style="width: 100%; height: 700px">
@@ -51,6 +54,18 @@
           <a href="https://space.bilibili.com/">访问靓仔的b站主页</a>
         </dierhang>
       </xiaowangzhan>
+      <dianzan>
+        <button onclick="dianzan()">0</button>
+        <script>
+          function dianzan() {
+            let dianzanShuBiaoQian = window.document.getElementById("dzs");
+            let dianzanShu = parseInt(dianzanShuBiaoQian.innerText);
+            let xinShuZi = dianzanShu + 1;
+            dianzanShuBiaoQian.innerText = xinShuZi;
+            return;
+          }
+        </script>
+      </dianzan>
     </center>
     <footer>
       <p>
@@ -60,5 +75,6 @@
         >
       </p>
     </footer>
+    <script src="scripts/main.js" defer></script>
   </body>
 </html>
