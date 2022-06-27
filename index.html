@@ -6,27 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>打酱油的菜鸟网站</title>
   </head>
-  <body
-    background="背景.jpg"
-    style="display: flex; flex-direction: column; align-items: center"
-  >
+  <body style="display: flex; flex-direction: column; align-items: center">
     <div align="center" style="width: 100%">
-      <touxiang>
-        <img
-          src="打酱油.jpeg"
-          alt="头像"
-          height="100"
-          width="100"
-          style="vertical-align: middle"
-        />
-        <h1 style="font-size: -webkit-xxx-large; display: -webkit-inline-box">
-          你好！
-        </h1>
-      </touxiang>
+      <header style="width: 100%; height: 127.5px; background-color: cyan;">
+        <touxiang style="align-items: center">
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              align-content: center;
+            "
+          >
+            <img
+              src="打酱油.jpeg"
+              alt="头像"
+              height="100"
+              width="100"
+              style="vertical-align: middle"
+            />
+            <h1
+              style="font-size: -webkit-xxx-large; display: -webkit-inline-box"
+            >
+              你好！
+            </h1>
+          </div>
+        </touxiang>
+      </header>
       <guankanshu> </guankanshu>
     </div>
-
-    <center style="width: 100%; height: 700px">
+    <center style="width: 100%; height: 700px;">
       <p>你好，欢迎来到我的世界，菜鸟的世界欢迎你！</p>
       <p>这是我自己的网站，暂时不知道放啥，就放了点小玩意</p>
       <xiaowangzhan
@@ -37,6 +46,10 @@
           flex-direction: column;
         "
       >
+        <!--导航页-->
+        <div>
+          <a href="navigate/navigate.html">我的导航页</a>
+        </div>
         <diyihang
           style="width: 100%; display: flex; justify-content: space-evenly"
         >
@@ -54,26 +67,22 @@
           <a href="https://space.bilibili.com/">访问靓仔的b站主页</a>
         </dierhang>
       </xiaowangzhan>
-      <dianzan>
-        <button onclick="dianzan()">0</button>
-        <script>
-          function dianzan() {
-            let dianzanShuBiaoQian = window.document.getElementById("dzs");
-            let dianzanShu = parseInt(dianzanShuBiaoQian.innerText);
-            let xinShuZi = dianzanShu + 1;
-            dianzanShuBiaoQian.innerText = xinShuZi;
-            return;
-          }
-        </script>
-      </dianzan>
     </center>
-    <footer>
-      <p>
-        版权：xxxxx 联系方式：<a
-          href="https://space.bilibili.com/264540155?spm_id"
-          >xxxxx</a
-        >
-      </p>
+    <footer style="
+    height: 50px;
+    width: 100%;
+    background-color:darkgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;">
+      <div class="copyright">
+        copyright@路人
+      </div>
+      <div class="contact">
+        联系方式：<a href="https://qm.qq.com/cgi-bin/qm/qr?k=-vN7GO4GP-l_wYNQTpWYkwQvlQr_LI1U&noverify=0""
+          >@路人</a>
+      </div>
     </footer>
     <script src="scripts/main.js" defer></script>
   </body>

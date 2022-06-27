@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>导航页</title>
+    <style type="text/css">
+      form .text {
+        display: inline-block;
+        border: 0;
+        width: 260px;
+        height: 35px;
+        font-size: 14px;
+        outline: none;
+
+        border: 2px solid #01af63;
+      }
+
+      form .search {
+        width: 90px;
+        height: 38px;
+        border: 0;
+        outline: none;
+        cursor: pointer;
+        /*   cursor: pointer;   鼠标悬停或点击时button时鼠标变成其他图标  */
+        text-align: center;
+        line-height: 40px;
+        background-color: #01af63;
+        color: #ffffff;
+      }
+
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+      }
+    </style>
+  </head>
+  <body
+    style="
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    "
+  >
+    <!--搜索框-->
+    <div
+      class="header"
+      style="
+        display: flex;
+        background-color: #eee;
+        height: 100px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <form target="_blank" method="get" action="https://www.baidu.com/s">
+        <input
+          type="text"
+          placeholder="请输入关键词"
+          name="word"
+          class="text"
+        />
+        <input type="submit" value="搜索" class="search" />
+      </form>
+    </div>
+    <!--导航网站-->
+    <div
+      class="main"
+      style="
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: space-evenly;
+      "
+    >
+      <!--导航网站1-->
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 10px;
+          width: 70px;
+          height: 90px;
+        "
+      >
+        <img src="img/bilibili.jpeg" alt="图标" width="60px" height="60px" />
+        <a href="https://www.bilibili.com/">BiliBili</a>
+      </div>
+      <!--导航网站2-->
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 10px;
+          width: 70px;
+          height: 90px;
+        "
+      >
+        <img src="img/菜鸟教程.jpeg" alt="图标" width="60px" height="60px" />
+        <a href="https://www.runoob.com/">菜鸟教程</a>
+      </div>
+      <!--导航网站3-->
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 10px;
+          width: 70px;
+          height: 90px;
+        "
+      >
+        <img src="img/MDN.jpeg" alt="图标" width="60px" height="60px" />
+        <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML">HTML|MDN</a>
+      </div>
+      <!--导航网站4-->
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 10px;
+          width: 70px;
+          height: 90px;
+        "
+      >
+        <img src="img/W3C.jpeg" alt="图标" width="60px" height="60px" />
+        <a href="https://www.w3cschool.cn/">W3C</a>
+      </div>
+      <!--导航网站5-->
+    </div>
+    <!--尾部-->
+    <div class="footer" style="height: 25px">copyright@luren</div>
+    <script src="css/main.css" defer></script>
+  </body>
+</html>
