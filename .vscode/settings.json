@@ -1,3 +1,4 @@
 {
-  "search-online.search-engine": "Baidu"
+  "search-online.search-engine": "Baidu",
+  "livePreview.defaultPreviewPath": "/firstweb.html"
 }

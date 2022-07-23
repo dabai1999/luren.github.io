@@ -5,11 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>打酱油的菜鸟网站</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+      }
+      .flex {
+        display: flex;
+        flex-direction: column;
+      }
+      .whiteBackGround {
+        background-color: white;
+      }
+      .border {
+        border: 1px solid black;
+      }
+    </style>
   </head>
-  <body style="display: flex; flex-direction: column; align-items: center">
-    <div align="center" style="width: 100%">
-      <header style="width: 100%; height: 127.5px; background-color: cyan;">
-        <touxiang style="align-items: center">
+  <body class="flex">
+    <header style="height: 140px">
+      <div
+        style="
+          background-color: linen;
+          text-align: center;
+          border-bottom: 1px solid black;
+        "
+      >
+        <!-- 头像 -->
+        <headPortrait style="align-items: center">
           <div
             style="
               display: flex;
@@ -19,7 +43,7 @@
             "
           >
             <img
-              src="打酱油.jpeg"
+              src="img/打酱油.jpeg"
               alt="头像"
               height="100"
               width="100"
@@ -31,57 +55,95 @@
               你好！
             </h1>
           </div>
-        </touxiang>
-      </header>
-      <guankanshu> </guankanshu>
-    </div>
-    <center style="width: 100%; height: 700px;">
-      <p>你好，欢迎来到我的世界，菜鸟的世界欢迎你！</p>
-      <p>这是我自己的网站，暂时不知道放啥，就放了点小玩意</p>
-      <xiaowangzhan
-        style="
-          width: 100%;
-          height: 700px;
-          display: flex;
-          flex-direction: column;
-        "
-      >
-        <!--导航页-->
-        <div>
-          <a href="navigate/navigate.html">我的导航页</a>
-        </div>
-        <diyihang
-          style="width: 100%; display: flex; justify-content: space-evenly"
-        >
-          <a href="http://liferestart.syaro.io/public/index.html"
-            >人生重开模拟器</a
-          >
-          <a href="https://www.yikm.net">小霸王游戏机</a>
-          <a href="https://www.bilibili.com/v/popular/all">b站热门</a>
-        </diyihang>
-        <dierhang
-          style="width: 100%; display: flex; justify-content: space-evenly"
-        >
-          <a href="http://paper.people.com.cn/">人民日报</a>
-          <a href="https://tophub.today/">今日热榜</a>
-          <a href="https://space.bilibili.com/">访问靓仔的b站主页</a>
-        </dierhang>
-      </xiaowangzhan>
-    </center>
-    <footer style="
-    height: 50px;
-    width: 100%;
-    background-color:darkgrey;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;">
-      <div class="copyright">
-        Copyright © 路人
+        </headPortrait>
       </div>
+    </header>
+    <center
+      class="whiteBackGround"
+      style="
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      "
+    >
+      <!-- 模块 -->
+      <!-- 第一行 -->
+      <div
+        class="whiteBackGround"
+        style="display: flex; justify-content: space-around; flex: 1"
+      >
+        <!-- 第一个模块 -->
+        <div class="border" style="background-color: #eee; flex: 1">
+          <!-- 标题 -->
+          <div>
+            <p>搜索引擎推荐</p>
+          </div>
+          <!-- 内容 -->
+          <div></div>
+        </div>
+        <!-- 第二个模块 -->
+        <div class="border" style="background-color: #eee; flex: 1">
+          <!-- 标题 -->
+          <div><p>编程网站推荐</p></div>
+          <!-- 内容 -->
+          <div></div>
+        </div>
+        <!-- 第三个模块 -->
+        <div class="border" style="background-color: #eee; flex: 1">
+          <!-- 标题 -->
+          <div><p>日常网站推荐</p></div>
+          <!-- 内容 -->
+          <div></div>
+        </div>
+      </div>
+      <!-- 第二行 -->
+      <div
+        class="whiteBackGround"
+        style="display: flex; justify-content: space-around; flex: 1"
+      >
+        <!-- 第四个模块 -->
+        <div class="border" style="background-color: #eee; flex: 1">
+          <!-- 标题 -->
+          <div><p>游戏网站推荐</p></div>
+          <!-- 内容 -->
+          <div></div>
+        </div>
+        <!-- 第五个模块 -->
+        <div class="border" style="background-color: #eee; flex: 1">
+          <!-- 标题 -->
+          <div><p>试听网站推荐</p></div>
+          <!-- 内容 -->
+          <div></div>
+        </div>
+        <!-- 第六个模块 -->
+        <div class="border" style="background-color: #eee; flex: 1">
+          <!-- 标题 -->
+          <div><p>我自己的小玩意</p></div>
+          <!-- 内容 -->
+          <div>
+            <a href="navigate/navigate.html">导航页</a>
+          </div>
+        </div>
+      </div>
+    </center>
+    <footer
+      style="
+        background-color: linen;
+        text-align: center;
+        padding: 40px;
+        font-size: 12px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-top: 1px solid black;
+      "
+    >
+      <div class="copyright">Copyright © 路人</div>
       <div class="contact">
-        联系方式：<a href="https://qm.qq.com/cgi-bin/qm/qr?k=-vN7GO4GP-l_wYNQTpWYkwQvlQr_LI1U&noverify=0""
-          >@路人</a>
+        <a href="contact information.html">联系作者</a>
       </div>
     </footer>
     <script src="scripts/main.js" defer></script>
