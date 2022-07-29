@@ -1,4 +1,15 @@
 {
   "search-online.search-engine": "Baidu",
-  "livePreview.defaultPreviewPath": "/firstweb.html"
+  "livePreview.defaultPreviewPath": "/index.html",
+  "liveServer.settings.port": 3000, //设置本地服务的端口号
+  "liveServer.settings.root": "/", //设置根目录，也就是打开的文件会在该目录下找
+  "liveServer.settings.NoBrowser": false,
+  "liveServer.settings.ignoredFiles": [
+    //设置忽略的文件
+    ".vscode/**",
+    "**/*.scss",
+    "**/*.sass"
+  ],
+  "liveServer.settings.CustomBrowser": null,
+  "liveServer.settings.ChromeDebuggingAttachment": false
 }

@@ -21,6 +21,16 @@
       .border {
         border: 1px solid black;
       }
+      @media only screen and (min-width: 600px) and (max-width: 1920px) {
+        .computerEndHeight {
+          height: 70%;
+        }
+      }
+      @media (max-width: 600px) {
+        .module {
+          flex-direction: column;
+        }
+      }
     </style>
   </head>
   <body class="flex">
@@ -59,70 +69,336 @@
       </div>
     </header>
     <center
-      class="whiteBackGround"
+      class="whiteBackGround computerEndHeight"
       style="
-        height: 70%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
       "
     >
       <!-- 模块 -->
-      <!-- 第一行 -->
+      <!-- 第一行模块 -->
       <div
-        class="whiteBackGround"
+        class="whiteBackGround module"
         style="display: flex; justify-content: space-around; flex: 1"
       >
         <!-- 第一个模块 -->
-        <div class="border" style="background-color: #eee; flex: 1">
+        <div
+          class="border"
+          style="
+            background-color: #eee;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+          "
+        >
           <!-- 标题 -->
           <div>
             <p>搜索引擎推荐</p>
           </div>
           <!-- 内容 -->
-          <div></div>
+          <div>
+            <!-- 第一行 -->
+            <div style="display: flex; justify-content: space-evenly">
+              <button style="flex: 1">
+                <a href="https://www.baidu.com/" style="text-decoration: none"
+                  >百度搜索</a
+                >
+              </button>
+              <button style="flex: 1">
+                <a href="https://www.sogou.com/" style="text-decoration: none"
+                  >搜狗搜索</a
+                >
+              </button>
+              <button style="flex: 1">
+                <a href="https://cn.bing.com/" style="text-decoration: none"
+                  >必应搜索</a
+                >
+              </button>
+            </div>
+            <!-- 第二行 -->
+            <div style="display: flex; justify-content: space-evenly">
+              <button style="flex: 1">
+                <a href="https://www.so.com/" style="text-decoration: none"
+                  >360搜索</a
+                >
+              </button>
+              <button style="flex: 1">
+                <a href="http://www.soso.com/" style="text-decoration: none"
+                  >soso搜索</a
+                >
+              </button>
+              <button style="flex: 1">
+                <a href="https://www.google.cn/" style="text-decoration: none"
+                  >Google搜索</a
+                >
+              </button>
+            </div>
+          </div>
         </div>
         <!-- 第二个模块 -->
-        <div class="border" style="background-color: #eee; flex: 1">
+        <div
+          class="border"
+          style="
+            background-color: #eee;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+          "
+        >
           <!-- 标题 -->
           <div><p>编程网站推荐</p></div>
           <!-- 内容 -->
-          <div></div>
+          <div>
+            <!-- 第一行 -->
+            <div style="display: flex; justify-content: space-evenly">
+              <button style="flex: 1">
+                <a href="https://www.runoob.com/" style="text-decoration: none"
+                  >菜鸟教程</a
+                >
+              </button>
+              <button style="flex: 1">
+                <a
+                  href="https://www.w3school.com.cn/"
+                  style="text-decoration: none"
+                  >W3School</a
+                >
+              </button>
+              <button style="flex: 1">
+                <a
+                  href="https://developer.mozilla.org/zh-CN/"
+                  style="text-decoration: none"
+                  >MDN文档</a
+                >
+              </button>
+            </div>
+            <!-- 第二行 -->
+            <div style="display: flex; justify-content: space-evenly">
+              <button style="flex: 1">
+                <a href="https://www.php.cn/" style="text-decoration: none"
+                  >php中文网</a
+                >
+              </button>
+              <button style="flex: 1">
+                <a href="https://github.com//" style="text-decoration: none"
+                  >Github</a
+                >
+              </button>
+              <button style="flex: 1">
+                <a
+                  href="https://www.icoderoad.com/"
+                  style="text-decoration: none"
+                  >路条编程</a
+                >
+              </button>
+            </div>
+          </div>
         </div>
         <!-- 第三个模块 -->
-        <div class="border" style="background-color: #eee; flex: 1">
+        <div
+          class="border"
+          style="
+            background-color: #eee;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+          "
+        >
           <!-- 标题 -->
           <div><p>日常网站推荐</p></div>
           <!-- 内容 -->
-          <div></div>
+          <div>
+            <!-- 第一行 -->
+            <div style="display: flex; justify-content: space-evenly">
+              <button style="flex: 1">
+                <a href="https://www.zhihu.com/" style="text-decoration: none"
+                  >知乎</a
+                >
+              </button>
+              <button style="flex: 1">
+                <a href="https://www.douban.com/" style="text-decoration: none"
+                  >豆瓣网</a
+                >
+              </button>
+              <button style="flex: 1">
+                <a
+                  href="http://paper.people.com.cn/"
+                  style="text-decoration: none"
+                  >人民日报</a
+                >
+              </button>
+            </div>
+            <!-- 第二行 -->
+            <div style="display: flex; justify-content: space-evenly">
+              <button style="flex: 1">
+                <a href="https://www.tmall.com/" style="text-decoration: none"
+                  >天猫商城</a
+                >
+              </button>
+              <button style="flex: 1">
+                <a href="https://www.jd.com/" style="text-decoration: none"
+                  >京东商城</a
+                >
+              </button>
+              <button style="flex: 1">
+                <a href="https://www.suning.com/" style="text-decoration: none"
+                  >苏宁易购</a
+                >
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-      <!-- 第二行 -->
+      <!-- 第二行模块 -->
       <div
-        class="whiteBackGround"
+        class="whiteBackGround module"
         style="display: flex; justify-content: space-around; flex: 1"
       >
         <!-- 第四个模块 -->
-        <div class="border" style="background-color: #eee; flex: 1">
+        <div
+          class="border"
+          style="
+            background-color: #eee;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+          "
+        >
           <!-- 标题 -->
           <div><p>游戏网站推荐</p></div>
           <!-- 内容 -->
-          <div></div>
+          <div>
+            <!-- 第一行 -->
+            <div style="display: flex; justify-content: space-evenly">
+              <button style="flex: 1">
+                <a href="https://www.3dmgame.com/" style="text-decoration: none"
+                  >3DM</a
+                >
+              </button>
+              <button style="flex: 1">
+                <a href="https://www.ali213.net/" style="text-decoration: none"
+                  >游侠网</a
+                >
+              </button>
+              <button style="flex: 1">
+                <a
+                  href="https://store.epicgames.com/zh-CN/"
+                  style="text-decoration: none"
+                  >EPIC</a
+                >
+              </button>
+            </div>
+            <!-- 第二行 -->
+            <div style="display: flex; justify-content: space-evenly">
+              <button style="flex: 1">
+                <a
+                  href="https://store.steampowered.com/"
+                  style="text-decoration: none"
+                  >Steam</a
+                >
+              </button>
+              <button style="flex: 1">
+                <a
+                  href="https://www.wegame.com.cn/"
+                  style="text-decoration: none"
+                  >WeGame</a
+                >
+              </button>
+              <button style="flex: 1">
+                <a href="http://game.163.com/" style="text-decoration: none"
+                  >网易游戏</a
+                >
+              </button>
+            </div>
+          </div>
         </div>
         <!-- 第五个模块 -->
-        <div class="border" style="background-color: #eee; flex: 1">
+        <div
+          class="border"
+          style="
+            background-color: #eee;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+          "
+        >
           <!-- 标题 -->
-          <div><p>试听网站推荐</p></div>
+          <div><p>视听网站推荐</p></div>
           <!-- 内容 -->
-          <div></div>
+          <div>
+            <!-- 第一行 -->
+            <div style="display: flex; justify-content: space-evenly">
+              <button style="flex: 1">
+                <a
+                  href="https://www.bilibili.com/"
+                  style="text-decoration: none"
+                  >哔哩哔哩</a
+                >
+              </button>
+              <button style="flex: 1">
+                <a href="https://v.qq.com/" style="text-decoration: none"
+                  >腾讯视频</a
+                >
+              </button>
+              <button style="flex: 1">
+                <a
+                  href="https://www.migu.cn/index.html"
+                  style="text-decoration: none"
+                  >咪咕影音</a
+                >
+              </button>
+            </div>
+            <!-- 第二行 -->
+            <div style="display: flex; justify-content: space-evenly">
+              <button style="flex: 1">
+                <a href="https://www.cctv.com/" style="text-decoration: none"
+                  >央视网</a
+                >
+              </button>
+              <button style="flex: 1">
+                <a href="https://y.qq.com/" style="text-decoration: none"
+                  >QQ音乐</a
+                >
+              </button>
+              <button style="flex: 1">
+                <a href="https://music.163.com/" style="text-decoration: none"
+                  >网易云音乐</a
+                >
+              </button>
+            </div>
+          </div>
         </div>
         <!-- 第六个模块 -->
-        <div class="border" style="background-color: #eee; flex: 1">
+        <div
+          class="border"
+          style="
+            background-color: #eee;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+          "
+        >
           <!-- 标题 -->
           <div><p>我自己的小玩意</p></div>
           <!-- 内容 -->
-          <div>
-            <a href="navigate/navigate.html">导航页</a>
+          <div style="display: flex; justify-content: space-evenly">
+            <button>
+              <a href="navigate/navigate.html" style="text-decoration: none"
+                >导航页</a
+              >
+            </button>
           </div>
         </div>
       </div>
@@ -143,7 +419,9 @@
     >
       <div class="copyright">Copyright © 路人</div>
       <div class="contact">
-        <a href="contact information.html">联系作者</a>
+        <a href="contact information.html" style="text-decoration: none"
+          >联系作者</a
+        >
       </div>
     </footer>
     <script src="scripts/main.js" defer></script>
