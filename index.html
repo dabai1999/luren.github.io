@@ -21,11 +21,13 @@
       .border {
         border: 1px solid black;
       }
-      @media only screen and (min-width: 600px) and (max-width: 1920px) {
+      /* 在600px和1000px的高度设置 */
+      @media only screen and (min-width: 600px) and (max-width: 10000px) {
         .computerEndHeight {
           height: 70%;
         }
       }
+      /* 在手机上面的页面布局 */
       @media (max-width: 600px) {
         .module {
           flex-direction: column;

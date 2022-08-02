@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex布局</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+      }
+      * {
+        border: 1px solid rgb(255, 255, 255);
+      }
+      .yinYing {
+        box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+          rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+      }
+      .flex {
+        display: flex;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .baiSe {
+        background-color: white;
+      }
+      .daoHang {
+        padding: 10px 20px;
+        border-bottom: 1px solid rgb(201, 201, 201);
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+      }
+      ul {
+        display: contents;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #f1f1f1;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+      }
+
+      li a {
+        display: flex;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
+
+      li a.active {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+      }
+      /* 下拉按钮样式 */
+      .dropbtn {
+        background-color: #4caf50;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+      }
+
+      /* 容器 <div> - 需要定位下拉内容 */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      /* 下拉内容 (默认隐藏) */
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      }
+
+      /* 下拉菜单的链接 */
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      /* 鼠标移上去后修改下拉菜单链接颜色 */
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+
+      /* 在鼠标移上去后显示下拉菜单 */
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      /* 当下拉内容显示后修改下拉按钮的背景颜色 */
+      .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+      }
+      /* 在600px和1000px的高度设置 */
+      @media only screen and (min-width: 600px) and (max-width: 10000px) {
+        .mgr {
+          margin-right: 8px;
+        }
+      }
+      @media (max-width: 600px) {
+        /* 小屏幕上取消侧边栏，后面学js时会教怎么弹出 */
+        .ceBian {
+          display: none;
+        }
+        /* 内容栏和数据栏flex方向改为竖向 */
+        .neiRong {
+          flex-direction: column;
+        }
+        .shuJuQu {
+          flex-direction: column;
+        }
+        /* 右区加左外边距 */
+        .youQu {
+          margin-left: 8px;
+        }
+        /* 数据块外边距，大小改为自动宽高 */
+        .shuJu {
+          margin: 0 0 8px;
+          flex: auto;
+        }
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!-- 侧边栏 -->
+    <div
+      style="width: 200px; flex-direction: column"
+      class="flex baiSe yinYing ceBian"
+    >
+      <!-- 头像栏 -->
+      <div
+        style="
+          padding: 10px;
+          align-items: center;
+          justify-content: center;
+          border-bottom: 1px solid #999;
+        "
+        class="flex"
+      >
+        <img src="img/打酱油.jpeg" alt="" style="width: 40px; height: 40px" />
+        <div style="margin-left: 10px"><b>打酱油</b></div>
+      </div>
+      <!-- 导航栏 -->
+      <div class="flex1">
+        <ul>
+          <li><a class="active daoHang" href="#home">主页</a></li>
+          <li><a class="daoHang" href="#news">导航</a></li>
+          <li><a class="daoHang" href="#contact">导航</a></li>
+          <li><a class="daoHang" href="#about">导航</a></li>
+          <li><a class="daoHang" href="#about">导航</a></li>
+          <li><a class="daoHang" href="#about">导航</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- 主区域 -->
+    <div class="flex flex1" style="flex-direction: column">
+      <!-- 头部栏 -->
+      <div class="baiSe yinYing flex" style="height: 60px; align-items: center">
+        <div class="dropdown">
+          <button class="dropbtn">下拉菜单</button>
+          <div class="dropdown-content">
+            <a href="#">下拉菜单 1</a>
+            <a href="#">下拉菜单 2</a>
+            <a href="#">下拉菜单 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">下拉菜单</button>
+          <div class="dropdown-content">
+            <a href="#">下拉菜单 1</a>
+            <a href="#">下拉菜单 2</a>
+            <a href="#">下拉菜单 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">下拉菜单</button>
+          <div class="dropdown-content">
+            <a href="#">下拉菜单 1</a>
+            <a href="#">下拉菜单 2</a>
+            <a href="#">下拉菜单 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">下拉菜单</button>
+          <div class="dropdown-content">
+            <a href="#">下拉菜单 1</a>
+            <a href="#">下拉菜单 2</a>
+            <a href="#">下拉菜单 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">下拉菜单</button>
+          <div class="dropdown-content">
+            <a href="#">下拉菜单 1</a>
+            <a href="#">下拉菜单 2</a>
+            <a href="#">下拉菜单 3</a>
+          </div>
+        </div>
+      </div>
+      <!-- 内容区 -->
+      <div class="flex flex1" style="overflow: auto">
+        <!-- 左区 -->
+        <div style="flex: 3; flex-direction: column; margin: 8px" class="flex">
+          <!-- 数据区 -->
+          <div class="flex shuJuQu">
+            <div
+              class="baiSe yinYing flex1 shuJu mgr"
+              style="height: 100px; flex: auto; margin-bottom: 8px"
+            ></div>
+            <div
+              class="baiSe yinYing flex1 shuJu mgr"
+              style="height: 100px; flex: auto; margin-bottom: 8px"
+            ></div>
+            <div
+              class="baiSe yinYing flex1 shuJu mgr"
+              style="height: 100px; flex: auto; margin-bottom: 8px"
+            ></div>
+            <div
+              class="baiSe yinYing flex1 shuJu"
+              style="height: 100px; flex: auto; margin-bottom: 8px"
+            ></div>
+          </div>
+          <!-- 列表区 -->
+          <div style="flex-direction: column">
+            <div
+              class="baiSe yinYing"
+              style="height: 160px; margin-bottom: 8px"
+            ></div>
+            <div
+              class="baiSe yinYing"
+              style="height: 160px; margin-bottom: 8px"
+            ></div>
+            <div
+              class="baiSe yinYing"
+              style="height: 160px; margin-bottom: 8px"
+            ></div>
+            <div
+              class="baiSe yinYing"
+              style="height: 160px; margin-bottom: 8px"
+            ></div>
+            <div
+              class="baiSe yinYing"
+              style="height: 160px; margin-bottom: 8px"
+            ></div>
+          </div>
+        </div>
+        <!-- 右区 -->
+        <div
+          class="flex youQu"
+          style="
+            flex: 1;
+            flex-direction: column;
+            margin-top: 8px;
+            margin-right: 8px;
+          "
+        >
+          <!-- 提示区 -->
+          <div class="baiSe yinYing" style="height: 150px"></div>
+          <!-- 消息区 -->
+          <div
+            class="baiSe yinYing"
+            style="height: 300px; margin-top: 8px"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
