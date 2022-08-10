@@ -5,39 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>导航页</title>
-    <style type="text/css">
-      form .text {
-        display: inline-block;
-        border: 0;
-        width: 260px;
-        height: 35px;
-        font-size: 14px;
-        outline: none;
-
-        border: 2px solid #01af63;
-      }
-
-      form .search {
-        width: 90px;
-        height: 38px;
-        border: 0;
-        outline: none;
-        cursor: pointer;
-        /*   cursor: pointer;   鼠标悬停或点击时button时鼠标变成其他图标  */
-        text-align: center;
-        line-height: 40px;
-        background-color: #01af63;
-        color: #ffffff;
-      }
-
-      body {
-        margin: 0;
-        height: 100vh;
-        background-color: #eee;
-      }
-    </style>
+    <style type="text/css"></style>
+    <link rel="stylesheet" type="text/css" href="css/float.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script src="js/float.js"></script>
   </head>
   <body
+    id="body"
+    class="box"
     style="
       display: flex;
       width: 100%;
@@ -47,7 +22,6 @@
   >
     <!--搜索框-->
     <div
-      class="header"
       style="
         display: flex;
         background-color: #eee;
@@ -55,6 +29,7 @@
         width: 100%;
         justify-content: center;
         align-items: center;
+        margin-top: 100px;
       "
     >
       <form target="_blank" method="get" action="https://www.baidu.com/s">
@@ -68,75 +43,139 @@
       </form>
     </div>
     <!--导航网站-->
-    <div
-      class="main"
-      style="
-        display: flex;
-        width: 100%;
-        height: 100%;
-        justify-content: space-evenly;
-      "
+    <ul
+      id="app-gird"
+      class="flex app-gird"
+      style="height: 100%; justify-content: space-evenly; margin-top: 50px"
     >
       <!--导航网站1-->
-      <div
-        style="
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin: 10px;
-          width: 70px;
-          height: 90px;
-        "
-      >
-        <img src="img/bilibili.jpeg" alt="图标" width="60px" height="60px" />
-        <a href="https://www.bilibili.com/">BiliBili</a>
-      </div>
+      <li class="bookmark">
+        <div>
+          <a href="https://www.bilibili.com/">
+            <img
+              src="https://api.xinac.net/icon/?url=https://www.bilibili.com/"
+              alt="图标"
+              class="iconSize"
+            />
+          </a>
+          <div class="app-del" onclick="appDelMine(this)">
+            <i
+              class="fa fa-close"
+              style="font-size: 48px; color: rgba(255, 4, 4, 0.8)"
+            ></i>
+          </div>
+        </div>
+        <p>BiliBili</p>
+      </li>
       <!--导航网站2-->
-      <div
-        style="
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin: 10px;
-          width: 70px;
-          height: 90px;
-        "
-      >
-        <img src="img/菜鸟教程.jpeg" alt="图标" width="60px" height="60px" />
-        <a href="https://www.runoob.com/">菜鸟教程</a>
-      </div>
+      <li class="bookmark">
+        <div>
+          <a href="https://www.runoob.com/">
+            <img
+              src="https://api.xinac.net/icon/?url=https://www.runoob.com/"
+              alt="图标"
+              class="iconSize"
+            />
+          </a>
+          <div class="app-del" onclick="appDelMine(this)">
+            <i
+              class="fa fa-close"
+              style="font-size: 48px; color: rgba(255, 4, 4, 0.8)"
+            ></i>
+          </div>
+        </div>
+        <p>菜鸟教程</p>
+      </li>
       <!--导航网站3-->
-      <div
-        style="
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin: 10px;
-          width: 70px;
-          height: 90px;
-        "
-      >
-        <img src="img/MDN.jpeg" alt="图标" width="60px" height="60px" />
-        <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML">HTML|MDN</a>
-      </div>
+      <li class="bookmark">
+        <div>
+          <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML"
+            ><img
+              src="https://api.xinac.net/icon/?url=https://developer.mozilla.org/zh-CN/docs/Web/HTML"
+              alt="图标"
+              class="iconSize"
+            />
+          </a>
+          <div class="app-del" onclick="appDelMine(this)">
+            <i
+              class="fa fa-close"
+              style="font-size: 48px; color: rgba(255, 4, 4, 0.8)"
+            ></i>
+          </div>
+        </div>
+        <p>HTML|MDN</p>
+      </li>
       <!--导航网站4-->
+      <li class="bookmark">
+        <div>
+          <a href="https://www.w3cschool.cn/">
+            <img
+              src="https://api.xinac.net/icon/?url=https://www.w3cschool.cn/"
+              alt="图标"
+              class="iconSize"
+            />
+          </a>
+          <div class="app-del" onclick="appDelMine(this)">
+            <i
+              class="fa fa-close"
+              style="font-size: 48px; color: rgba(255, 4, 4, 0.8)"
+            ></i>
+          </div>
+        </div>
+        <p>W3C</p>
+      </li>
+      <!-- 添加按钮 -->
+      <li class="bookmark">
+        <div>
+          <a href="#" onclick="appAdd()"
+            ><img src="img/加.png" alt="添加书签" class="iconSize"
+          /></a>
+        </div>
+        <p>添加</p>
+      </li>
+      <!-- 删除按钮 -->
+      <li class="bookmark">
+        <div>
+          <a href="#"
+            ><img src="img/删除.png" alt="删除书签" class="iconSize"
+          /></a>
+        </div>
+        <p>删除</p>
+      </li>
+    </ul>
+    <!-- 悬浮页面 -->
+    <div id="light" class="floating-frame app-add">
       <div
-        style="
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin: 10px;
-          width: 70px;
-          height: 90px;
-        "
+        class="flex column align-center justify-center"
+        style="height: 180px"
       >
-        <img src="img/W3C.jpeg" alt="图标" width="60px" height="60px" />
-        <a href="https://www.w3cschool.cn/">W3C</a>
+        <div>
+          <span>网址：(需加上https://)</span><br />
+          <input id="app-add-url" type="text" class="floating-frame-input" />
+        </div>
+        <div>
+          <span>名字：</span><br />
+          <input id="app-add-name" type="text" class="floating-frame-input" />
+        </div>
       </div>
-      <!--导航网站5-->
+      <div class="floating-frame-button-div">
+        <button
+          class="floating-frame-button"
+          style="margin-right: 10px"
+          onclick="appAdds()"
+        >
+          保存
+        </button>
+        <button
+          class="floating-frame-button"
+          style="margin-left: 10px"
+          onclick="appAdd()"
+        >
+          取消
+        </button>
+      </div>
     </div>
-    <!--尾部-->
-    <div class="footer" style="height: 25px">Copyright © luren</div>
-    <script src="css/main.css" defer></script>
+    <!-- 尾部 -->
+    <div style="height: 25px">Copyright © luren</div>
   </body>
 </html>

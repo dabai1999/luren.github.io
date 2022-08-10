@@ -1,27 +1,73 @@
-html {
-  height: 100%;
+form .text {
+  display: inline-block;
+  border: 0;
+  width: 260px;
+  height: 35px;
+  font-size: 14px;
+  outline: none;
+
+  border: 2px solid #01af63;
+}
+
+form .search {
+  width: 90px;
+  height: 38px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  /*   cursor: pointer;   鼠标悬停或点击时button时鼠标变成其他图标  */
+  text-align: center;
+  line-height: 40px;
+  background-color: #01af63;
+  color: #ffffff;
 }
 
 body {
   min-height: 100%;
   margin: 0;
-  padding: 0;
-  position: relative;
+  height: 100vh;
+  background-color: #eee;
+}
+/* 书签格式 */
+.bookmark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  width: 70px;
+  height: 90px;
 }
 
-.header {
-  background-color: #ffe4c4;
+.flex {
+  display: flex;
 }
-
-.main {
-  padding-bottom: 100px;
-  background-color: #f4e51a;
-} /*main的padding-bottom值要等于或大于footer的height*/
-
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
-  background-color: #ffc0cb;
+.iconSize {
+  height: 60px;
+  width: 60px;
+}
+.column {
+  flex-direction: column;
+}
+.align-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+@media (max-width: 600px) {
+  .clock {
+    display: none;
+  }
+  .app-gird {
+    padding: 0 5vw !important;
+  }
+  .app-setup {
+    width: 70% !important;
+    top: 0 !important;
+    height: 100% !important;
+  }
+  .noteBook {
+    width: 90% !important ;
+    height: 60% !important;
+  }
 }

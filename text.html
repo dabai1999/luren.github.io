@@ -1,77 +1,44 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <title>点击文字弹出一个DIV层窗口代码</title>
+    <style>
+      .white_content {
+        display: none;
+        position: absolute;
+        top: 25%;
+        left: 25%;
+        width: 55%;
+        height: 55%;
+        padding: 20px;
+        border: 10px solid orange;
+        background-color: white;
+        z-index: 1002;
+        overflow: auto;
+      }
+    </style>
+    <script src="text.js"></script>
   </head>
   <body>
-    <!-- 表格 -->
-    <table border="1">
-      <tr>
-        <td style="height: 50px; width: 50px"></td>
-        <td style="height: 50px; width: 50px"></td>
-      </tr>
-      <tr>
-        <td style="height: 50px; width: 50px"></td>
-        <td style="height: 50px; width: 50px"></td>
-      </tr>
-    </table>
-    <!-- 输入 -->
-    <form action="">
-      Username: <input type="text" name="user" /><br />
-      Password: <input type="password" name="password" />
-    </form>
-    <form action="">
-      First name: <input type="text" name="firstname" /><br />
-      Last name: <input type="text" name="lastname" />
-    </form>
-    <!-- 选框 -->
-    <form action="">
-      <input type="radio" name="sex" value="male" />男<br />
-      <input type="radio" name="sex" value="female" />女
-    </form>
-    <form>
-      <input type="checkbox" name="vehicle" value="Bike" />我喜欢自行车<br />
-      <input type="checkbox" name="vehicle" value="Car" />我喜欢小汽车
-    </form>
-    <!-- 提交数据 -->
-    <form name="input" action="html_form_action.php" method="get">
-      Username: <input type="text" name="user" />
-      <input type="submit" value="Submit" />
-    </form>
-    <!-- 以下表单使用 GET 请求发送数据到当前的 URL，method 默认位 GET。 -->
-    <form>
-      <label
-        >Name:
-        <input name="submitted-name" autocomplete="name" />
-      </label>
-      <button>Save</button>
-    </form>
-
-    <!-- 以下表单使用 POST 请求发送数据到当前的 URL。 -->
-    <form method="post">
-      <label
-        >Name:
-        <input name="submitted-name" autocomplete="name" />
-      </label>
-      <button>Save</button>
-    </form>
-
-    <!-- 表单使用 fieldset, legend, 和 label 标签 -->
-    <form method="post">
-      <fieldset>
-        <legend>Title</legend>
-        <label><input type="radio" name="radio" /> Select me</label>
-      </fieldset>
-    </form>
-    <!-- 框架 -->
-    <iframe
-      src="navigate/navigate.html"
-      frameborder="0"
-      width="100%"
-      height="100%"
-    ></iframe>
+    <p>示例弹出层：<a href="#" onclick="openDialog()">请点这里</a></p>
+    <div id="light" class="white_content">
+      <table>
+        <tr>
+          <td>fffff</td>
+          <td>dddddd</td>
+        </tr>
+        <tr>
+          <td>fffff</td>
+          <td>dddddd</td>
+        </tr>
+        <tr>
+          <td>fffff</td>
+          <td>dddddd</td>
+        </tr>
+      </table>
+      <a href="#" onclick="closeDialog()">点这里关闭本窗口</a>
+    </div>
+    <div id="fade" class="black_overlay"></div>
   </body>
+  <script type="text/javascript"></script>
 </html>

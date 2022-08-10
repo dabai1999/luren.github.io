@@ -1,0 +1,48 @@
+.floating-frame {
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -40%);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  z-index: 5;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 250px;
+  padding: 40px;
+  margin: auto;
+  border-radius: 25px;
+  color: var(--main-colorFont);
+  background-color: white;
+}
+.floating-frame-input {
+  font-size: 15px;
+  height: 30px;
+  border-radius: 5px;
+}
+.floating-frame-button-div {
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: flex-start;
+}
+.floating-frame-button {
+  margin-top: 10px;
+  padding: 5px 20px;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* 添加图标时，模糊背景，屏蔽选择 */
+/* 添加图标时，模糊背景，屏蔽选择 */
+.active .box {
+  filter: blur(10px);
+  pointer-events: none;
+  user-select: none;
+}
+.active .app-add {
+  display: flex;
+}
