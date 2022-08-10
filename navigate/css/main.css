@@ -29,7 +29,7 @@ body {
   background-color: #eee;
 }
 /* 书签格式 */
-.bookmark {
+.book-mark {
   display: flex;
   flex-direction: column;
   align-items: center;
