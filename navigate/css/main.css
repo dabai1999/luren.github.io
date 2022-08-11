@@ -21,7 +21,9 @@ form .search {
   background-color: #01af63;
   color: #ffffff;
 }
-
+li {
+  list-style: none;
+}
 body {
   min-height: 100%;
   margin: 0;
@@ -40,6 +42,9 @@ body {
 
 .flex {
   display: flex;
+}
+.flex1 {
+  flex: 1;
 }
 .iconSize {
   height: 60px;
@@ -70,4 +75,81 @@ body {
     width: 90% !important ;
     height: 60% !important;
   }
+}
+.app-gird {
+  position: relative;
+  display: flex;
+  user-select: none;
+  grid-template-columns: repeat(auto-fill, var(--gird-column));
+  grid-auto-rows: var(--gird-row);
+  grid-auto-flow: row;
+  box-sizing: border-box;
+  padding: 0 10vw;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: center;
+}
+.app-a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  backdrop-filter: blur(10px);
+  /* background-color: rgba(255, 255, 255, 0.5); */
+}
+/* 删除app */
+.app-del {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.active-del .app-del {
+  display: flex;
+}
+.active-del .app-del-on {
+  background-color: rgba(6, 251, 30, 0.6);
+}
+.app-del-on {
+  position: relative;
+}
+.app-div {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  border-radius: var(--icon-radius);
+}
+.app-div:hover {
+  box-shadow: 0 0 5px 5px rgb(0, 0, 0, 0.2);
+}
+
+.app-icon {
+  height: 100%;
+  overflow-y: auto;
+}
+.app-li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  height: 90px;
+  padding: 0 10px 20px;
+}
+.app-img {
+  height: 60px;
+  width: 60px;
+  border-radius: var(--appImg-radius);
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

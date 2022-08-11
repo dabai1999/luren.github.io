@@ -8,7 +8,12 @@
     <style type="text/css"></style>
     <link rel="stylesheet" type="text/css" href="css/float.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" href="css/font.css" />
     <script src="js/float.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css"
+    />
   </head>
   <body
     id="body"
@@ -42,107 +47,133 @@
         <input type="submit" value="搜索" class="search" />
       </form>
     </div>
-    <!--导航网站-->
-    <ul
-      id="app-gird"
-      class="flex app-gird"
-      style="height: 100%; justify-content: space-evenly; margin-top: 50px"
-    >
-      <!--导航网站1-->
-      <li class="book-mark">
-        <div>
-          <a href="https://www.bilibili.com/">
-            <img
-              src="https://api.xinac.net/icon/?url=https://www.bilibili.com/"
-              alt="图标"
-              class="iconSize"
-            />
-          </a>
-          <div class="app-del" onclick="appDelMine(this)">
-            <i
-              class="fa fa-close"
-              style="font-size: 48px; color: rgba(255, 4, 4, 0.8)"
-            ></i>
+    <!-- 书签 -->
+    <div class="app-icon flex1">
+      <ul id="app-gird" class="app-gird">
+        <!-- 默认网站链接 -->
+        <li class="app-li user">
+          <div class="app-div">
+            <a
+              href="https://www.bilibili.com"
+              class="app-a"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img
+                class="app-img"
+                src="https://api.xinac.net/icon/?url=www.bilibili.com"
+                alt="哔哩哔哩"
+            /></a>
+            <div class="app-del" onclick="appDelMine(this)">
+              <i
+                class="fa fa-close"
+                style="font-size: 48px; color: rgba(255, 4, 4, 0.8)"
+              ></i>
+            </div>
           </div>
-        </div>
-        <p>BiliBili</p>
-      </li>
-      <!--导航网站2-->
-      <li class="book-mark">
-        <div>
-          <a href="https://www.runoob.com/">
-            <img
-              src="https://api.xinac.net/icon/?url=https://www.runoob.com/"
-              alt="图标"
-              class="iconSize"
-            />
-          </a>
-          <div class="app-del" onclick="appDelMine(this)">
-            <i
-              class="fa fa-close"
-              style="font-size: 48px; color: rgba(255, 4, 4, 0.8)"
-            ></i>
+          <p class="app-title">哔哩哔哩</p>
+        </li>
+        <li class="app-li user">
+          <div class="app-div">
+            <a
+              href="https://www.runoob.com/"
+              class="app-a"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img
+                class="app-img"
+                src="https://api.xinac.net/icon/?url=https://www.runoob.com/"
+                alt="菜鸟教程"
+            /></a>
+            <div class="app-del" onclick="appDelMine(this)">
+              <i
+                class="fa fa-close"
+                style="font-size: 48px; color: rgba(255, 4, 4, 0.8)"
+              ></i>
+            </div>
           </div>
-        </div>
-        <p>菜鸟教程</p>
-      </li>
-      <!--导航网站3-->
-      <li class="book-mark">
-        <div>
-          <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML"
-            ><img
-              src="https://api.xinac.net/icon/?url=https://developer.mozilla.org/zh-CN/docs/Web/HTML"
-              alt="图标"
-              class="iconSize"
-            />
-          </a>
-          <div class="app-del" onclick="appDelMine(this)">
-            <i
-              class="fa fa-close"
-              style="font-size: 48px; color: rgba(255, 4, 4, 0.8)"
-            ></i>
+          <p class="app-title">菜鸟教程</p>
+        </li>
+        <li class="app-li user">
+          <div class="app-div">
+            <a
+              href="https://www.zhihu.com"
+              class="app-a"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img
+                class="app-img"
+                src="https://api.xinac.net/icon/?url=www.zhihu.com"
+                alt="知乎"
+            /></a>
+            <div class="app-del" onclick="appDelMine(this)">
+              <i
+                class="fa fa-close"
+                style="font-size: 48px; color: rgba(255, 4, 4, 0.8)"
+              ></i>
+            </div>
           </div>
-        </div>
-        <p>HTML|MDN</p>
-      </li>
-      <!--导航网站4-->
-      <li class="book-mark">
-        <div>
-          <a href="https://www.w3cschool.cn/">
-            <img
-              src="https://api.xinac.net/icon/?url=https://www.w3cschool.cn/"
-              alt="图标"
-              class="iconSize"
-            />
-          </a>
-          <div class="app-del" onclick="appDelMine(this)">
-            <i
-              class="fa fa-close"
-              style="font-size: 48px; color: rgba(255, 4, 4, 0.8)"
-            ></i>
+          <p class="app-title">知乎</p>
+        </li>
+        <li class="app-li user">
+          <div class="app-div">
+            <a
+              href="https://developer.mozilla.org/zh-CN/docs/Web/HTML"
+              class="app-a"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img
+                class="app-img"
+                src="https://api.xinac.net/icon/?url=https://developer.mozilla.org/zh-CN/docs/Web/HTML"
+                alt="HTML|MDN"
+            /></a>
+            <div class="app-del" onclick="appDelMine(this)">
+              <i
+                class="fa fa-close"
+                style="font-size: 48px; color: rgba(255, 4, 4, 0.8)"
+              ></i>
+            </div>
           </div>
-        </div>
-        <p>W3C</p>
-      </li>
-      <!-- 添加按钮 -->
-      <li class="book-mark">
-        <div>
-          <a href="#" onclick="appAdd()"
-            ><img src="img/加.png" alt="添加书签" class="iconSize"
-          /></a>
-        </div>
-        <p>添加</p>
-      </li>
-      <!-- 删除按钮 -->
-      <li class="book-mark">
-        <div>
-          <a href="#"
-            ><img src="img/删除.png" alt="删除书签" class="iconSize"
-          /></a>
-        </div>
-        <p>删除</p>
-      </li>
-    </ul>
+          <p class="app-title">HTML|MDN</p>
+        </li>
+        <li class="app-li user">
+          <div class="app-div">
+            <a
+              href="https://www.w3cschool.cn/"
+              class="app-a"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img
+                class="app-img"
+                src="https://api.xinac.net/icon/?url=https://www.w3cschool.cn/"
+                alt="W3C"
+            /></a>
+            <div class="app-del" onclick="appDelMine(this)">
+              <i
+                class="fa fa-close"
+                style="font-size: 48px; color: rgba(255, 4, 4, 0.8)"
+              ></i>
+            </div>
+          </div>
+          <p class="app-title">W3C</p>
+        </li>
+        <!-- 工具app -->
+        <!-- 添加app -->
+        <li class="app-li default">
+          <div class="app-div">
+            <a href="#" class="app-a" onclick="appAdd()"
+              ><img src="img/加.png" alt="" style="width:60px ;height: 60px;"></a>
+          </div>
+          <p class="app-title">添加</p>
+        </li>
+        <!-- 删除app -->
+        <li class="app-li default">
+          <div class="app-div">
+            <a href="#" class="app-a app-del-on" onclick="appDel()"
+              ><img src="img/删除.png" alt="" style="height: 60px;width:60px"></a>
+          </div>
+          <p class="app-title">删除</p>
+        </li>
+    </div>
     <!-- 悬浮页面 -->
     <div id="light" class="floating-frame app-add">
       <div

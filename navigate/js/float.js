@@ -1,9 +1,23 @@
-function openFloat() {
-  document.getElementById("light").style.display = "block";
+//调试
+let log = function (i) {
+  console.log(i);
+};
+
+//调用本地浏览器图标缓存信息
+let data = window.localStorage.getItem("user");
+let defaultLi = document.querySelectorAll(".default");
+//保留有default class样式的li，添加至用户缓存最后
+if (data) {
+  let liStr = "";
+  for (let index = 0; index < defaultLi.length; index++) {
+    liStr += defaultLi[index].outerHTML;
+  }
+  data = data + liStr;
+  document.getElementById("app-gird").innerHTML = data;
 }
-function closeFloat() {
-  document.getElementById("light").style.display = "none";
-}
+//背景毛玻璃特效
+let input = document.querySelector(".input-box");
+let mao = document.getElementById("mao");
 //打开、关闭 添加app窗口
 function appAdd() {
   let appUrl = document.getElementById("app-add-url");
@@ -46,29 +60,27 @@ function appAdds() {
   //抓取 两个input.value
   let appUrl = document.getElementById("app-add-url");
   let appName = document.getElementById("app-add-name");
-  //在ul中尾部插入innerHTML
+  //在ul中尾部插入innerhtml
   // 备用获取图标api接口：https://api.qqsuu.cn/api/get?url=
   let ulGird = document.querySelector(".app-gird");
   if (appUrl.value !== "" && appName.value !== "") {
     ulGird.innerHTML =
-      `<li class="bookmark">
-        <div>
-          <a href="${appUrl.value}"
-            ><img
-              src="https://api.xinac.net/icon/?url=${appUrl.value}"
-              alt="${appName.value}"
-              class="iconSize"
-            />
-          </a>
-          <div class="app-del" onclick="appDelMine(this)">
-            <i
-              class="fa fa-close"
-              style="font-size: 48px; color: rgba(255, 4, 4, 0.8)"
-            ></i>
-          </div>
-        </div>
-        <p>${appName.value}</p>
-      </li>` + ulGird.innerHTML;
+      `<li class="app-li user">
+              <div class="app-div">
+                <a
+                  href="${appUrl.value}"
+                  class="app-a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><img
+                    class="app-img"
+                    src="https://api.xinac.net/icon/?url=${appUrl.value}"
+                    alt="${appName.value}"
+                /></a>
+                <div class="app-del" onclick="appDelMine(this)"><i class="fa fa-close" style="font-size:48px;color: rgba(255, 4, 4, 0.8)"></i></div>
+              </div>
+              <p class="app-title">${appName.value}</p>
+            </li>` + ulGird.innerHTML;
     appAdd();
     //保存ul信息到浏览器缓存;
     save();
