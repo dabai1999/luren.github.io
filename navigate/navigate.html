@@ -8,8 +8,8 @@
     <style type="text/css"></style>
     <link rel="stylesheet" type="text/css" href="css/float.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <link rel="stylesheet" href="css/font.css" />
-    <script src="js/float.js"></script>
+    
+    <script src="js/main.js"  Content-Type="text/javascript"></script>
     <link
       rel="stylesheet"
       href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css"
@@ -64,10 +64,7 @@
                 alt="哔哩哔哩"
             /></a>
             <div class="app-del" onclick="appDelMine(this)">
-              <i
-                class="fa fa-close"
-                style="font-size: 48px; color: rgba(255, 4, 4, 0.8)"
-              ></i>
+              <img src="img/删除.png" alt="" style="height: 60px; width:60px;background-color: rgba(255, 0, 0, 0.825);">
             </div>
           </div>
           <p class="app-title">哔哩哔哩</p>
@@ -85,10 +82,7 @@
                 alt="菜鸟教程"
             /></a>
             <div class="app-del" onclick="appDelMine(this)">
-              <i
-                class="fa fa-close"
-                style="font-size: 48px; color: rgba(255, 4, 4, 0.8)"
-              ></i>
+              <img src="img/删除.png" alt="" style="height: 60px; width:60px;background-color: rgba(255, 0, 0, 0.825);">
             </div>
           </div>
           <p class="app-title">菜鸟教程</p>
@@ -106,10 +100,7 @@
                 alt="知乎"
             /></a>
             <div class="app-del" onclick="appDelMine(this)">
-              <i
-                class="fa fa-close"
-                style="font-size: 48px; color: rgba(255, 4, 4, 0.8)"
-              ></i>
+              <img src="img/删除.png" alt="" style="height: 60px; width:60px;background-color: rgba(255, 0, 0, 0.825);">
             </div>
           </div>
           <p class="app-title">知乎</p>
@@ -127,10 +118,7 @@
                 alt="HTML|MDN"
             /></a>
             <div class="app-del" onclick="appDelMine(this)">
-              <i
-                class="fa fa-close"
-                style="font-size: 48px; color: rgba(255, 4, 4, 0.8)"
-              ></i>
+              <img src="img/删除.png" alt="" style="height: 60px; width:60px;background-color: rgba(255, 0, 0, 0.825);">
             </div>
           </div>
           <p class="app-title">HTML|MDN</p>
@@ -148,10 +136,7 @@
                 alt="W3C"
             /></a>
             <div class="app-del" onclick="appDelMine(this)">
-              <i
-                class="fa fa-close"
-                style="font-size: 48px; color: rgba(255, 4, 4, 0.8)"
-              ></i>
+              <img src="img/删除.png" alt="" style="height: 60px; width:60px;background-color: rgba(255, 0, 0, 0.825);">
             </div>
           </div>
           <p class="app-title">W3C</p>
@@ -175,35 +160,19 @@
         </li>
     </div>
     <!-- 悬浮页面 -->
-    <div id="light" class="floating-frame app-add">
-      <div
-        class="flex column align-center justify-center"
-        style="height: 180px"
-      >
-        <div>
-          <span>网址：(需加上https://)</span><br />
-          <input id="app-add-url" type="text" class="floating-frame-input" />
-        </div>
-        <div>
-          <span>名字：</span><br />
-          <input id="app-add-name" type="text" class="floating-frame-input" />
-        </div>
+    <div class="app-add">
+      <div class="app-add-div">
+        <span class="app-add-title">网址：(需加上https://)</span>
+        <input id="app-add-url" class="app-add-input" type="text" />
       </div>
-      <div class="floating-frame-button-div">
-        <button
-          class="floating-frame-button"
-          style="margin-right: 10px"
-          onclick="appAdds()"
-        >
-          保存
-        </button>
-        <button
-          class="floating-frame-button"
-          style="margin-left: 10px"
-          onclick="appAdd()"
-        >
-          取消
-        </button>
+
+      <div class="app-add-div">
+        <span class="app-add-title">名称：</span>
+        <input id="app-add-name" class="app-add-input" type="text" />
+      </div>
+      <div class="app-add-div-btn">
+        <button class="app-add-btn" onclick="appAdds()">确定</button>
+        <button class="app-add-btn" onclick="appAdd()">取消</button>
       </div>
     </div>
     <!-- 尾部 -->

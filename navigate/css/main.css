@@ -118,7 +118,7 @@ body {
   display: flex;
 }
 .active-del .app-del-on {
-  background-color: rgba(6, 251, 30, 0.6);
+  background-color: rgba(251, 6, 6, 0.807);
 }
 .app-del-on {
   position: relative;
@@ -152,4 +152,7 @@ body {
   object-fit: cover;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.app-title {
+  font-size: 12px;
 }

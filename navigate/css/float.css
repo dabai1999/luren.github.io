@@ -36,7 +36,55 @@
   border-radius: 5px;
   cursor: pointer;
 }
-/* 添加图标时，模糊背景，屏蔽选择 */
+/* 添加app */
+.app-add {
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  background-color: white;
+  transform: translate(-50%, -40%);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  z-index: 5;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 250px;
+  padding: 40px;
+  margin: auto;
+  border-radius: 25px;
+  color: var(--main-colorFont);
+}
+.app-add-title {
+  font-size: 15px;
+}
+.app-add-div {
+  display: flex;
+  margin: 8px;
+  flex-direction: column;
+}
+.app-add-input {
+  font-size: 15px;
+  height: 30px;
+  border-radius: 5px;
+}
+.app-add-div-btn {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.app-add-btn {
+  margin-top: 10px;
+  padding: 5px 20px;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.app-add-btn:hover {
+  background-color: rgba(2, 60, 250, 0.6);
+}
 /* 添加图标时，模糊背景，屏蔽选择 */
 .active .box {
   filter: blur(10px);
@@ -45,13 +93,4 @@
 }
 .active .app-add {
   display: flex;
-}
-/* fa */
-.fa {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }

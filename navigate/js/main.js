@@ -2,7 +2,6 @@
 let log = function (i) {
   console.log(i);
 };
-
 //调用本地浏览器图标缓存信息
 let data = window.localStorage.getItem("user");
 let defaultLi = document.querySelectorAll(".default");
@@ -15,9 +14,6 @@ if (data) {
   data = data + liStr;
   document.getElementById("app-gird").innerHTML = data;
 }
-//背景毛玻璃特效
-let input = document.querySelector(".input-box");
-let mao = document.getElementById("mao");
 //打开、关闭 添加app窗口
 function appAdd() {
   let appUrl = document.getElementById("app-add-url");
@@ -77,7 +73,7 @@ function appAdds() {
                     src="https://api.xinac.net/icon/?url=${appUrl.value}"
                     alt="${appName.value}"
                 /></a>
-                <div class="app-del" onclick="appDelMine(this)"><i class="fa fa-close" style="font-size:48px;color: rgba(255, 4, 4, 0.8)"></i></div>
+                <div class="app-del" onclick="appDelMine(this)"><img src="img/删除.png" alt="" style="height: 60px; width:60px;background-color: rgba(255, 0, 0, 0.825);"></div>
               </div>
               <p class="app-title">${appName.value}</p>
             </li>` + ulGird.innerHTML;
